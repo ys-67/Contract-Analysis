@@ -1,8 +1,10 @@
 import os
 from google import genai
+from dotenv import load_dotenv
 
 # API 키 입력
-API_KEY = "AIzaSyALBkWNSkPsrwotNwT4za995E3bYHp85r0"  # 여기에 키를 입력하세요
+load_dotenv()
+API_KEY = os.environ.get('API_KEY')
 
 def list_available_models():
     # 클라이언트 초기화

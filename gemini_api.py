@@ -3,9 +3,11 @@ import json
 import mimetypes
 from google import genai
 from google.genai import types
+from dotenv import load_dotenv
 
 # --- 설정 ---
-API_KEY = "AIzaSyALBkWNSkPsrwotNwT4za995E3bYHp85r0"   # API 키 입력
+load_dotenv()
+API_KEY = os.environ.get('API_KEY') # API 키 입력
 TARGET_FILE = "asdf.pdf"      # ★ 여기에 PDF 파일이나 이미지 파일 경로를 넣으세요 (.pdf, .png, .jpg 등)
 MODEL_NAME = "gemini-flash-latest" # 회원님 목록에 있는 모델 (또는 gemini-2.0-flash-exp)
 # -----------
